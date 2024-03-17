@@ -1,10 +1,11 @@
 import streamlit as st
 from fastai.vision.all import *
+import platform
 import pathlib
 
-temp = pathlib.PosixPath
-pathlib.PosixPath = pathlib.WindowsPath
-st.title('To\'p klassifikatsiya modeli')
+plt = platform.system()
+if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath 
+    st.title('To\'p klassifikatsiya modeli')
 
 # rasm yuklash
 file = st.file_uploader('Rasm yuklang', type=['png', 'jpg'])
