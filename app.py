@@ -5,7 +5,8 @@ import pathlib
 
 plt = platform.system()
 if plt == 'Linux': pathlib.WindowsPath = pathlib.PosixPath 
-    st.title('To\'p klassifikatsiya modeli')
+
+st.title('To\'p klassifikatsiya modeli')
 
 # rasm yuklash
 file = st.file_uploader('Rasm yuklang', type=['png', 'jpg'])
